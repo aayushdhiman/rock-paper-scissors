@@ -1,4 +1,4 @@
-import java.util.Scanner;
+import javax.swing.JOptionPane;
 
 public class HumanPlayer extends GamePlayer {
 	public HumanPlayer(String playerName) {
@@ -11,10 +11,7 @@ public class HumanPlayer extends GamePlayer {
 	 */
 	public void makeChoice() {
 		int pick = 0;
-		Scanner scanner = new Scanner(System.in);
-		System.out.println("1. Rock\n2. Paper\n3. Scissors");
-		pick = scanner.nextInt();
-
+		pick = Integer.parseInt(JOptionPane.showInputDialog("1. Rock\n2. Paper\n3. Scissors"));
 		setChoice(pick);
 	}
 
